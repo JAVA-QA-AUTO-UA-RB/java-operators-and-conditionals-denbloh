@@ -8,24 +8,24 @@ public class Main {
         System.out.println("Hello brave hero!");
         System.out.println("Welcome into the journey 'Magic Forest'!");
         System.out.println("Before we begin, do you want to know your state indicators? Type 1 for 'yes' or 2 for 'no'");
-        Scanner den_scanner = new Scanner(System.in);
+        Scanner denScanner = new Scanner(System.in);
 
         int health = 40;
         int luck = 20;
 
-        int choice1 = den_scanner.nextInt();
-        if (choice1 == 1) {
+        int statsChoice = denScanner.nextInt();
+        if (statsChoice == 1) {
             System.out.println("Your health is: " + health);
             System.out.println("Your luck is: " + luck);
-        } else if (choice1 == 2) {
+        } else if (statsChoice == 2) {
             System.out.println("It's your choice. Let's keep the mystery:)");
         } else {
             System.out.println("Hmm.. Looks like you are not very attentive. Ok, never mind, let's continue");
         }
 
         System.out.println("You were walking along a magical path and came across a crossroads: 1 - go left, 2 - go right. Make a choice!");
-        int choice2 = den_scanner.nextInt();
-        switch (choice2) {
+        int roadChoice = denScanner.nextInt();
+        switch (roadChoice) {
             case 1 -> {
                 health -= 20;
                 System.out.println("You walk along an old path and lose 20 health points");
@@ -41,8 +41,8 @@ public class Main {
         }
 
         System.out.println("You walk further and come across a well: 1 - drink, 2 - ignore well. Make a choice!");
-        int choice3 = den_scanner.nextInt();
-        switch (choice3) {
+        int wellChoice = denScanner.nextInt();
+        switch (wellChoice) {
             case 1:
                 health += 50;
                 System.out.println("You drink magic water and gain 50 health points");
@@ -73,40 +73,53 @@ public class Main {
             }
         }
 
-        System.out.println("You finished your journey. Do you want to see the results? Type 1 for 'yes' or 2 for 'no'");
-        int choice4 = den_scanner.nextInt();
-        if (choice4 == 1) {
-            System.out.println("At the end of journey your Health is: " + health + " and your Luck is: " + luck);
-            if (health <= 0 || luck <= 0) {
+
+        System.out.println("You finished your journey. Let's check the results!");
+        System.out.println("At the end of journey your Health is: " + health + " and your Luck is: " + luck);
+
+        if (health <= 0 || luck <= 0) {
                 System.out.println("You couldn't get through the forest... Try again!");
             }
             else {
                 System.out.println("Congratulations! You were able to get through the magic forest!");
             }
-        } else if (choice4 == 2) {
-            System.out.println("So why did you play? I'll show you results anyway.");
-            System.out.println("At the end of journey your Health is: " + health + " and your Luck is: " + luck);
-            if (health <= 0 || luck <= 0) {
-                System.out.println("You couldn't get through the forest... Try again!");
-            }
-            else {
-                System.out.println("Congratulations! You were able to get through the magic forest!");
-            }
-        } else {
-            System.out.println("Really? Not attentive again? I'll show you results anyway.");
-            System.out.println("At the end of journey your Health is: " + health + " and your Luck is: " + luck);
-            if (health <= 0 || luck <= 0) {
-                System.out.println("You couldn't get through the forest... Try again!");
-            }
-            else {
-                System.out.println("Congratulations! You were able to get through the magic forest!");
-            }
-        }
+
+
+//
+//        System.out.println("You finished your journey. Do you want to see the results? Type 1 for 'yes' or 2 for 'no'");
+//        int choice4 = denScanner.nextInt();
+//        if (choice4 == 1) {
+//            System.out.println("At the end of journey your Health is: " + health + " and your Luck is: " + luck);
+//            if (health <= 0 || luck <= 0) {
+//                System.out.println("You couldn't get through the forest... Try again!");
+//            }
+//            else {
+//                System.out.println("Congratulations! You were able to get through the magic forest!");
+//            }
+//        } else if (choice4 == 2) {
+//            System.out.println("So why did you play? I'll show you results anyway.");
+//            System.out.println("At the end of journey your Health is: " + health + " and your Luck is: " + luck);
+//            if (health <= 0 || luck <= 0) {
+//                System.out.println("You couldn't get through the forest... Try again!");
+//            }
+//            else {
+//                System.out.println("Congratulations! You were able to get through the magic forest!");
+//            }
+//        } else {
+//            System.out.println("Really? Not attentive again? I'll show you results anyway.");
+//            System.out.println("At the end of journey your Health is: " + health + " and your Luck is: " + luck);
+//            if (health <= 0 || luck <= 0) {
+//                System.out.println("You couldn't get through the forest... Try again!");
+//            }
+//            else {
+//                System.out.println("Congratulations! You were able to get through the magic forest!");
+//            }
+//        }
 
         System.out.println("Thanks for playing!");
         System.out.println("Stay tune for next releases!");
 
-        den_scanner.close();
+        denScanner.close();
 
     }
 
